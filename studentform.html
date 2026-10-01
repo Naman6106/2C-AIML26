@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ragistration form</title>
+</head>
+<style>
+    div{
+        height:400px;
+        width:300px;
+        border:1px,solid;
+        border-radius: 30px;
+    }
+    h3{
+        text-align: center;
+    }
+    button{
+    
+        color: red;
+    }
+</style>
+<body>
+    <form>
+    <div class="A">
+        <div class="B">
+            <u><h3>Registration</h3></u>
+            <label>Name:</Name:br><input type="text" placeholder="Enter name">
+            </label>
+            <br>
+            <br>
+            <label>
+            Email:<input type="email" placeholder="Enter email">
+            </label>
+            <br>
+            <br>
+            <label>Password:<input type="password" placeholder="Enter password"></label><br><br>
+            
+            Confirm Password:<input type="password" placeholder="Re-Enter Password"><br><br>
+            Mobile:<input type="text" placeholder="Enter Mobile number"><br>
+            <button type="submit">Submit</button>
+        </div>
+    </div>
+</form>
+<script>
+    var name = document.getElementsByName(name);
+    if(name === " " && typeOf (name!== string)){
+        alert("Only characters");
+        return false;
+    }
+    var no = document.getElementsByName(Mobile);
+    if(Mobile.lenght.value !== 10){
+        aletr("Wrong number");
+        return false;
+    }
+    let pass=document.getElementbyId(pass);
+    if(pass===char){
+        return false;
+    }
+    let re_pass=document.getElementById(re-pass);
+    if(re_pass!==pass){
+        alert("Enter correct password");
+        return false;
+    }
+    let email=document.getElementbyId(email);
+    atpos=email.indexof("@");
+    dotpos=email.LastIndexOf(".");
+    if(dotpos-atpos!=5)
+
+</script>
+</body>
+</html>

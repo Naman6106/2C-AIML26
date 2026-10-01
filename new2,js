@@ -1,0 +1,33 @@
+class Student{
+    rollNo;
+    marks;
+    Name;
+    static counter=0;
+    constructor(n,m,r){
+        this.rollNo=r;
+        this.marks=m;
+        this.Name=n;
+        Student.counter++;
+
+    }
+     displayResult(){
+        console.log("Name is :",this.Name);
+        console.log("Marks is: ",this.marks);
+        console.log("Roll No. is: ",this.rollNo)
+        if(this.marks>40){
+            console.log("Student passed");
+        }
+        else{
+            console.log("Student failed");
+        }
+    }
+
+
+};
+let s1= new Student("Naman",90,122);
+let s2= new Student("Nitin",80,129);
+let s3=new Student("Manan",70,109);
+s1.displayResult();
+s2.displayResult();
+s3.displayResult();
+console.log("Total students",Student.counter);
