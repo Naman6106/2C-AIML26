@@ -138,44 +138,239 @@ export default App;*/
 
 //Example:-6
 
-import { useState } from 'react';
+// import { useState } from 'react';
 
+// function App() {
+//   const [count, setCount] = useState(0);
+
+//   function increaseCount() {
+//     setCount(count + 1);
+//   }
+
+//   function decreaseCount() {
+//     setCount(count - 1);
+//   }
+
+//   function resetCount() {
+//     setCount(0);
+//   }
+
+//   return (
+//     <div>
+//       <h1>React Counter</h1>
+
+//       <h2>Count: {count}</h2>
+
+//       <button onClick={increaseCount}>
+//         Increase
+//       </button>
+//       <br />
+
+//       <button onClick={decreaseCount}>
+//         Decrease
+//       </button>
+//       <br />
+
+//       <button onClick={resetCount}>
+//         Reset
+//       </button>
+//     </div>
+//   );
+// }
+
+// export default App;
+// import{userState}from 'react';
+// function App(){
+//     const [count,setCount]=useState(0);
+//     function  increaseCount(){
+//         setCount(count+1);
+//     }
+//     function  decreaseCount(){
+//         setCount(count-1);
+//     }
+//     function reSet(){
+//         setCount(0);
+//     }
+//     return 
+//     (
+//         <div>
+//         <h2>React count</h2>
+//         <h1>{count}</h1>
+//         <button onclick={increaseCount}>Increase</button>
+//         <button onclick={decreaseCount}>Decrease</button>
+//         <button onclick={reSet}>Reset</button>
+//         </div>
+//     )
+
+
+// }
+import{useState}from 'react';
+
+// function App(){
+//     const[name,setName] = useState('');
+//     const[roll,setRoll] = useState('');
+//     function nameChange(event){
+//         setName(event.target.value);
+
+//     }
+//     function rollChange(event){
+//         setRoll(event.target.value);
+
+//     }
+//     return(
+//         <div>
+//             <h2>
+//                 Student Name
+//             </h2>
+//             <input
+//             type="text"
+//             value={name} onChange={nameChange} 
+//             placeholder="Write Your Name Here">
+//             </input>
+//             <h3>
+//                 Student name is {name}
+//             </h3>
+//             <br></br>
+//             <br>
+//             </br>
+//              <h2>
+//                 Student RollNo.
+//             </h2>
+//             <input
+//             type="text"
+//             value={roll} onChange={rollChange} 
+//             placeholder="Write Your Roll No. Here">
+//             </input>
+//             <h3>
+//                 Student roll is {roll}
+//             </h3>
+//         </div>
+//     );
+
+
+
+// }
+// function App(){
+//     const[name,setName] = useState('');
+//     const[roll,setRoll] = useState('');
+//     function nameChange(event){
+//         setName(event.target.value);
+
+//     }
+//     function rollChange(event){
+//         setRoll(event.target.value);
+
+//     }
+//     return(
+//         <div>
+//             <h2>
+//                 Student Name
+//             </h2>
+//             <input
+//             type="text"
+//             value={name} onChange={nameChange} 
+//             placeholder="Write Your Name Here">
+//             </input>
+//             <h3>
+//                 Student name is {name}
+//             </h3>
+//             <br></br>
+//             <br>
+//             </br>
+//              <h2>
+//                 Student RollNo.
+//             </h2>
+//             <input
+//             type="text"
+//             value={roll} onChange={rollChange} 
+//             placeholder="Write Your Roll No. Here">
+//             </input>
+//             <h3>
+//                 Student roll is {roll}
+//             </h3>
+//         </div>
+//     );
+
+
+
+// }
+// export default App;
+
+
+// function App() {
+//     const [name, setName] = useState("");
+//     const [roll, setRoll] = useState("");
+
+//     function nameChange(event) {
+//         setName(event.target.value);
+//     }
+
+//     function rollChange(event) {
+//         setRoll(event.target.value);
+//     }
+
+//     function display(event) {
+//         event.preventDefault();
+//         alert("Student Name: " + name + "\nRoll No: " + roll);
+//     }
+
+//     return (
+//         <form onSubmit={display}>
+//             <h2>Student Name</h2>
+
+//             <input
+//                 type="text"
+//                 value={name}
+//                 onChange={nameChange}
+//                 placeholder="Write Your Name Here"
+//             />
+
+//             <h3>Student name is {name}</h3>
+
+//             <br />
+//             <br />
+
+//             <h2>Student RollNo.</h2>
+
+//             <input
+//                 type="text"
+//                 value={roll}
+//                 onChange={rollChange}
+//                 placeholder="Write Your Roll No. Here"
+//             />
+
+//             <h3>Student roll is {roll}</h3>
+
+//             <br />
+
+//             <button type="submit">Display</button>
+//         </form>
+//     );
+// }
+
+// export default App;
 function App() {
-  const [count, setCount] = useState(0);
-
-  function increaseCount() {
-    setCount(count + 1);
-  }
-
-  function decreaseCount() {
-    setCount(count - 1);
-  }
-
-  function resetCount() {
-    setCount(0);
-  }
+  const students = [
+    { id: 1, name: 'Rahul ', attendance: 82 },
+    { id: 2, name: 'Vikas', attendance: 76 },
+    { id: 3, name: 'Mohit', attendance: 91 }
+  ];
+  const studentList = students.map(function (student) {
+    return (
+      <li key={student.id}>
+        {student.name} - {student.attendance}%
+      </li>
+    );
+  });
 
   return (
     <div>
-      <h1>React Counter</h1>
-
-      <h2>Count: {count}</h2>
-
-      <button onClick={increaseCount}>
-        Increase
-      </button>
-      <br />
-
-      <button onClick={decreaseCount}>
-        Decrease
-      </button>
-      <br />
-
-      <button onClick={resetCount}>
-        Reset
-      </button>
+      <h1>Student Attendance List</h1>
+      <ul>
+        {studentList}
+      </ul>
     </div>
   );
 }
-
 export default App;
+
